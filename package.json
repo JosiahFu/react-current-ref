@@ -1,7 +1,7 @@
 {
   "name": "@tater-archives/react-current-ref",
   "version": "1.0.0",
-  "description": "React hook to statefully set an interval",
+  "description": "Utilities to simplify using refs to avoid state closure",
   "type": "module",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
