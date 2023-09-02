@@ -1,6 +1,6 @@
 {
   "name": "@tater-archives/react-current-ref",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utilities to simplify using refs to avoid state closure",
   "type": "module",
   "main": "dist/cjs/index.js",
