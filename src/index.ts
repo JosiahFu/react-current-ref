@@ -1,4 +1,4 @@
-import { RefObject, useCallback, useEffect, useRef } from 'react';
+import { RefObject, useCallback, useRef } from 'react';
 
 /**
  * Creates a ref that is always updated whenever the value changes, so it is
@@ -15,10 +15,7 @@ import { RefObject, useCallback, useEffect, useRef } from 'react';
  */
 function useValueRef<T>(value: T): RefObject<T> {
     const ref = useRef(value);
-
-    useEffect(() => {
-        ref.current = value;
-    }, [value]);
+    ref.current = value;
 
     return ref;
 }
@@ -34,10 +31,7 @@ function useValueRef<T>(value: T): RefObject<T> {
  */
 function useFunctionRef<T extends (...args: any) => any>(func: T): T {
     const funcRef = useRef(func);
-
-    useEffect(() => {
-        funcRef.current = func;
-    }, [func])
+    funcRef.current = func;
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const wrapperFunc: T = useCallback<T>(((
